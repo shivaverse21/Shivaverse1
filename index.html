@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ShivaVerse - AI Tools Hub</title>
+<title>ShivaVerse - Discover the Best AI Tools</title>
 
 <meta name="description" content="ShivaVerse is a premium AI tools directory where you can discover the best AI tools for writing, coding, design and productivity.">
 
@@ -23,7 +25,7 @@ header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 30px;
+padding:15px 25px;
 background:#020617;
 }
 
@@ -33,22 +35,20 @@ font-weight:bold;
 color:#6366f1;
 }
 
-/* MENU */
-
 nav{
 display:flex;
 gap:20px;
 }
 
 nav a{
-text-decoration:none;
 color:white;
+text-decoration:none;
 font-size:14px;
 }
 
 .menu-btn{
 display:none;
-font-size:22px;
+font-size:24px;
 cursor:pointer;
 }
 
@@ -61,7 +61,6 @@ padding:80px 20px;
 
 .hero h1{
 font-size:40px;
-margin-bottom:10px;
 }
 
 .hero p{
@@ -90,14 +89,16 @@ background:#1e293b;
 padding:20px;
 border-radius:12px;
 transition:0.3s;
+text-align:center;
 }
 
 .card:hover{
 transform:translateY(-5px);
 }
 
-.card h3{
-margin-top:0;
+.card img{
+width:40px;
+margin-bottom:10px;
 }
 
 button{
@@ -144,6 +145,7 @@ display:block;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -156,9 +158,9 @@ display:block;
 
 <nav id="menu">
 <a href="#">Home</a>
-<a href="#">Writing</a>
-<a href="#">Image</a>
-<a href="#">Coding</a>
+<a href="#">AI Tools</a>
+<a href="#">Trending</a>
+<a href="#">About</a>
 </nav>
 
 </header>
@@ -167,7 +169,7 @@ display:block;
 
 <h1>Discover Powerful AI Tools</h1>
 
-<p>Your premium AI tools directory</p>
+<p>Your premium directory for the best AI tools.</p>
 
 <div class="search">
 <input type="text" id="searchInput" placeholder="Search AI tools..." onkeyup="searchTools()">
@@ -178,73 +180,73 @@ display:block;
 <section class="tools">
 
 <div class="card">
+<img src="https://cdn.simpleicons.org/openai/white">
 <h3>ChatGPT</h3>
-<p>AI chatbot for writing and coding.</p>
+<p>AI chatbot for writing & coding</p>
 <a href="https://chat.openai.com" target="_blank">
 <button>Open Tool</button>
 </a>
 </div>
 
 <div class="card">
+<img src="https://cdn.simpleicons.org/anthropic/white">
 <h3>Claude</h3>
-<p>AI assistant by Anthropic.</p>
+<p>AI assistant by Anthropic</p>
 <a href="https://claude.ai" target="_blank">
 <button>Open Tool</button>
 </a>
 </div>
 
 <div class="card">
+<img src="https://cdn.simpleicons.org/google/white">
 <h3>Gemini</h3>
-<p>Google AI assistant.</p>
+<p>Google AI assistant</p>
 <a href="https://gemini.google.com" target="_blank">
 <button>Open Tool</button>
 </a>
 </div>
 
 <div class="card">
-<h3>Midjourney</h3>
-<p>AI image generator.</p>
-<a href="https://www.midjourney.com" target="_blank">
-<button>Open Tool</button>
-</a>
-</div>
-
-<div class="card">
-<h3>DALL-E</h3>
-<p>OpenAI image generation AI.</p>
-<a href="https://openai.com/dall-e" target="_blank">
-<button>Open Tool</button>
-</a>
-</div>
-
-<div class="card">
+<img src="https://cdn.simpleicons.org/canva/white">
 <h3>Canva AI</h3>
-<p>Design with powerful AI tools.</p>
+<p>Design using AI</p>
 <a href="https://www.canva.com" target="_blank">
 <button>Open Tool</button>
 </a>
 </div>
 
 <div class="card">
+<img src="https://cdn.simpleicons.org/github/white">
 <h3>GitHub Copilot</h3>
-<p>AI coding assistant.</p>
+<p>AI coding assistant</p>
 <a href="https://github.com/features/copilot" target="_blank">
 <button>Open Tool</button>
 </a>
 </div>
 
 <div class="card">
-<h3>Cursor</h3>
-<p>AI powered code editor.</p>
-<a href="https://cursor.sh" target="_blank">
+<img src="https://cdn.simpleicons.org/notion/white">
+<h3>Notion AI</h3>
+<p>AI productivity assistant</p>
+<a href="https://www.notion.so" target="_blank">
 <button>Open Tool</button>
 </a>
 </div>
 
 <div class="card">
-<h3>Notion AI</h3>
-<p>AI productivity assistant.</p>
-<a href="https://www.notion.so" target="_blank">
+<img src="https://cdn.simpleicons.org/replit/white">
+<h3>Replit AI</h3>
+<p>AI coding platform</p>
+<a href="https://replit.com" target="_blank">
+<button>Open Tool</button>
+</a>
+</div>
+
+<div class="card">
+<img src="https://cdn.simpleicons.org/adobe/white">
+<h3>Adobe Firefly</h3>
+<p>AI image generation</p>
+<a href="https://firefly.adobe.com" target="_blank">
 <button>Open Tool</button>
 </a>
 </div>
@@ -291,4 +293,5 @@ document.getElementById("menu").classList.toggle("show");
 </script>
 
 </body>
+
 </html>
