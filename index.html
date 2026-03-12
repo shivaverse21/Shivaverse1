@@ -3,9 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ShivaVerse - AI Tools Hub</title>
 
+<meta name="description" content="ShivaVerse is a premium AI tools directory where you can discover the best AI tools for writing, coding, design and productivity.">
+
 <style>
+
 body{
 font-family:Arial;
 margin:0;
@@ -13,194 +17,277 @@ background:#0f172a;
 color:white;
 }
 
+/* HEADER */
+
 header{
 display:flex;
 justify-content:space-between;
-padding:20px;
-background:#111827;
+align-items:center;
+padding:15px 30px;
+background:#020617;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+color:#6366f1;
+}
+
+/* MENU */
+
+nav{
+display:flex;
+gap:20px;
 }
 
 nav a{
-color:white;
-margin-left:15px;
 text-decoration:none;
+color:white;
+font-size:14px;
 }
+
+.menu-btn{
+display:none;
+font-size:22px;
+cursor:pointer;
+}
+
+/* HERO */
 
 .hero{
 text-align:center;
-padding:60px 20px;
+padding:80px 20px;
+}
+
+.hero h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.hero p{
+color:#9ca3af;
 }
 
 .search input{
+margin-top:20px;
 padding:12px;
 width:280px;
 border-radius:8px;
 border:none;
 }
 
+/* TOOLS */
+
 .tools{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+gap:25px;
 padding:40px;
 }
 
 .card{
-background:#1f2937;
+background:#1e293b;
 padding:20px;
 border-radius:12px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h3{
+margin-top:0;
 }
 
 button{
 background:#6366f1;
 border:none;
 padding:10px 15px;
-color:white;
 border-radius:6px;
+color:white;
 cursor:pointer;
-margin-top:10px;
 }
+
+/* FOOTER */
 
 footer{
 text-align:center;
-padding:20px;
-background:#111827;
+padding:25px;
+background:#020617;
+margin-top:40px;
 }
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+nav{
+display:none;
+flex-direction:column;
+background:#020617;
+position:absolute;
+top:60px;
+right:0;
+width:200px;
+padding:20px;
+}
+
+nav.show{
+display:flex;
+}
+
+.menu-btn{
+display:block;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-<h2>ShivaVerse</h2>
-<nav>
+
+<div class="logo">ShivaVerse</div>
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<nav id="menu">
+<a href="#">Home</a>
 <a href="#">Writing</a>
 <a href="#">Image</a>
 <a href="#">Coding</a>
 </nav>
+
 </header>
 
 <section class="hero">
-<h1>Discover the Best AI Tools</h1>
-<p>Your curated directory of powerful AI tools.</p>
+
+<h1>Discover Powerful AI Tools</h1>
+
+<p>Your premium AI tools directory</p>
 
 <div class="search">
 <input type="text" id="searchInput" placeholder="Search AI tools..." onkeyup="searchTools()">
 </div>
+
 </section>
 
 <section class="tools">
 
 <div class="card">
 <h3>ChatGPT</h3>
-<p>AI chatbot for writing & coding.</p>
-<a href="https://chat.openai.com" target="_blank"><button>Open Tool</button></a>
+<p>AI chatbot for writing and coding.</p>
+<a href="https://chat.openai.com" target="_blank">
+<button>Open Tool</button>
+</a>
 </div>
 
 <div class="card">
 <h3>Claude</h3>
 <p>AI assistant by Anthropic.</p>
-<a href="https://claude.ai" target="_blank"><button>Open Tool</button></a>
+<a href="https://claude.ai" target="_blank">
+<button>Open Tool</button>
+</a>
 </div>
 
 <div class="card">
 <h3>Gemini</h3>
 <p>Google AI assistant.</p>
-<a href="https://gemini.google.com" target="_blank"><button>Open Tool</button></a>
-</div>
-
-<div class="card">
-<h3>Jasper</h3>
-<p>AI writing assistant.</p>
-<a href="https://www.jasper.ai" target="_blank"><button>Open Tool</button></a>
-</div>
-
-<div class="card">
-<h3>Copy.ai</h3>
-<p>AI marketing copy generator.</p>
-<a href="https://www.copy.ai" target="_blank"><button>Open Tool</button></a>
-</div>
-
-<div class="card">
-<h3>Grammarly</h3>
-<p>AI grammar & writing helper.</p>
-<a href="https://www.grammarly.com" target="_blank"><button>Open Tool</button></a>
+<a href="https://gemini.google.com" target="_blank">
+<button>Open Tool</button>
+</a>
 </div>
 
 <div class="card">
 <h3>Midjourney</h3>
 <p>AI image generator.</p>
-<a href="https://www.midjourney.com" target="_blank"><button>Open Tool</button></a>
+<a href="https://www.midjourney.com" target="_blank">
+<button>Open Tool</button>
+</a>
 </div>
 
 <div class="card">
 <h3>DALL-E</h3>
-<p>OpenAI image generation model.</p>
-<a href="https://openai.com/dall-e" target="_blank"><button>Open Tool</button></a>
+<p>OpenAI image generation AI.</p>
+<a href="https://openai.com/dall-e" target="_blank">
+<button>Open Tool</button>
+</a>
 </div>
 
 <div class="card">
-<h3>Leonardo AI</h3>
-<p>AI art generator.</p>
-<a href="https://leonardo.ai" target="_blank"><button>Open Tool</button></a>
-</div>
-
-<div class="card">
-<h3>Canva</h3>
-<p>Design with AI tools.</p>
-<a href="https://www.canva.com" target="_blank"><button>Open Tool</button></a>
+<h3>Canva AI</h3>
+<p>Design with powerful AI tools.</p>
+<a href="https://www.canva.com" target="_blank">
+<button>Open Tool</button>
+</a>
 </div>
 
 <div class="card">
 <h3>GitHub Copilot</h3>
 <p>AI coding assistant.</p>
-<a href="https://github.com/features/copilot" target="_blank"><button>Open Tool</button></a>
+<a href="https://github.com/features/copilot" target="_blank">
+<button>Open Tool</button>
+</a>
 </div>
 
 <div class="card">
 <h3>Cursor</h3>
-<p>AI code editor.</p>
-<a href="https://cursor.sh" target="_blank"><button>Open Tool</button></a>
-</div>
-
-<div class="card">
-<h3>Replit</h3>
-<p>AI coding platform.</p>
-<a href="https://replit.com" target="_blank"><button>Open Tool</button></a>
+<p>AI powered code editor.</p>
+<a href="https://cursor.sh" target="_blank">
+<button>Open Tool</button>
+</a>
 </div>
 
 <div class="card">
 <h3>Notion AI</h3>
-<p>AI notes & productivity.</p>
-<a href="https://www.notion.so" target="_blank"><button>Open Tool</button></a>
-</div>
-
-<div class="card">
-<h3>Pictory</h3>
-<p>AI video generator.</p>
-<a href="https://pictory.ai" target="_blank"><button>Open Tool</button></a>
+<p>AI productivity assistant.</p>
+<a href="https://www.notion.so" target="_blank">
+<button>Open Tool</button>
+</a>
 </div>
 
 </section>
 
 <footer>
+
 © 2026 ShivaVerse
+
 </footer>
 
 <script>
+
 function searchTools(){
+
 let input=document.getElementById("searchInput").value.toLowerCase();
 let cards=document.querySelectorAll(".card");
 
 cards.forEach(function(card){
+
 let text=card.innerText.toLowerCase();
+
 if(text.includes(input)){
+
 card.style.display="block";
+
 }else{
+
 card.style.display="none";
+
 }
+
 });
+
 }
+
+function toggleMenu(){
+
+document.getElementById("menu").classList.toggle("show");
+
+}
+
 </script>
 
 </body>
