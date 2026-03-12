@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ShivaVerse - Discover the Best AI Tools</title>
-
-<meta name="description" content="ShivaVerse is a premium AI tools directory where you can discover the best AI tools for writing, coding, design and productivity.">
+<title>ShivaVerse - AI Tools Directory</title>
 
 <style>
 
@@ -17,6 +14,7 @@ font-family:Arial;
 margin:0;
 background:#0f172a;
 color:white;
+scroll-behavior:smooth;
 }
 
 /* HEADER */
@@ -27,6 +25,8 @@ justify-content:space-between;
 align-items:center;
 padding:15px 25px;
 background:#020617;
+position:sticky;
+top:0;
 }
 
 .logo{
@@ -43,7 +43,6 @@ gap:20px;
 nav a{
 color:white;
 text-decoration:none;
-font-size:14px;
 }
 
 .menu-btn{
@@ -63,14 +62,10 @@ padding:80px 20px;
 font-size:40px;
 }
 
-.hero p{
-color:#9ca3af;
-}
-
 .search input{
 margin-top:20px;
 padding:12px;
-width:280px;
+width:260px;
 border-radius:8px;
 border:none;
 }
@@ -88,17 +83,12 @@ padding:40px;
 background:#1e293b;
 padding:20px;
 border-radius:12px;
-transition:0.3s;
 text-align:center;
+transition:0.3s;
 }
 
 .card:hover{
 transform:translateY(-5px);
-}
-
-.card img{
-width:40px;
-margin-bottom:10px;
 }
 
 button{
@@ -110,13 +100,27 @@ color:white;
 cursor:pointer;
 }
 
+/* TRENDING */
+
+.trending{
+padding:60px;
+text-align:center;
+background:#020617;
+}
+
+/* ABOUT */
+
+.about{
+padding:60px;
+text-align:center;
+}
+
 /* FOOTER */
 
 footer{
 text-align:center;
 padding:25px;
 background:#020617;
-margin-top:40px;
 }
 
 /* MOBILE */
@@ -157,19 +161,19 @@ display:block;
 <div class="menu-btn" onclick="toggleMenu()">☰</div>
 
 <nav id="menu">
-<a href="#">Home</a>
-<a href="#">AI Tools</a>
-<a href="#">Trending</a>
-<a href="#">About</a>
+<a href="#home">Home</a>
+<a href="#tools">AI Tools</a>
+<a href="#trending">Trending</a>
+<a href="#about">About</a>
 </nav>
 
 </header>
 
-<section class="hero">
+<section class="hero" id="home">
 
 <h1>Discover Powerful AI Tools</h1>
 
-<p>Your premium directory for the best AI tools.</p>
+<p>Your directory for the best AI tools</p>
 
 <div class="search">
 <input type="text" id="searchInput" placeholder="Search AI tools..." onkeyup="searchTools()">
@@ -177,10 +181,9 @@ display:block;
 
 </section>
 
-<section class="tools">
+<section class="tools" id="tools">
 
 <div class="card">
-<img src="https://cdn.simpleicons.org/openai/white">
 <h3>ChatGPT</h3>
 <p>AI chatbot for writing & coding</p>
 <a href="https://chat.openai.com" target="_blank">
@@ -189,7 +192,6 @@ display:block;
 </div>
 
 <div class="card">
-<img src="https://cdn.simpleicons.org/anthropic/white">
 <h3>Claude</h3>
 <p>AI assistant by Anthropic</p>
 <a href="https://claude.ai" target="_blank">
@@ -198,7 +200,6 @@ display:block;
 </div>
 
 <div class="card">
-<img src="https://cdn.simpleicons.org/google/white">
 <h3>Gemini</h3>
 <p>Google AI assistant</p>
 <a href="https://gemini.google.com" target="_blank">
@@ -207,16 +208,22 @@ display:block;
 </div>
 
 <div class="card">
-<img src="https://cdn.simpleicons.org/canva/white">
+<h3>Midjourney</h3>
+<p>AI image generator</p>
+<a href="https://www.midjourney.com" target="_blank">
+<button>Open Tool</button>
+</a>
+</div>
+
+<div class="card">
 <h3>Canva AI</h3>
-<p>Design using AI</p>
+<p>AI design platform</p>
 <a href="https://www.canva.com" target="_blank">
 <button>Open Tool</button>
 </a>
 </div>
 
 <div class="card">
-<img src="https://cdn.simpleicons.org/github/white">
 <h3>GitHub Copilot</h3>
 <p>AI coding assistant</p>
 <a href="https://github.com/features/copilot" target="_blank">
@@ -225,7 +232,6 @@ display:block;
 </div>
 
 <div class="card">
-<img src="https://cdn.simpleicons.org/notion/white">
 <h3>Notion AI</h3>
 <p>AI productivity assistant</p>
 <a href="https://www.notion.so" target="_blank">
@@ -234,7 +240,6 @@ display:block;
 </div>
 
 <div class="card">
-<img src="https://cdn.simpleicons.org/replit/white">
 <h3>Replit AI</h3>
 <p>AI coding platform</p>
 <a href="https://replit.com" target="_blank">
@@ -242,14 +247,21 @@ display:block;
 </a>
 </div>
 
-<div class="card">
-<img src="https://cdn.simpleicons.org/adobe/white">
-<h3>Adobe Firefly</h3>
-<p>AI image generation</p>
-<a href="https://firefly.adobe.com" target="_blank">
-<button>Open Tool</button>
-</a>
-</div>
+</section>
+
+<section class="trending" id="trending">
+
+<h2>Trending AI Tools</h2>
+
+<p>ChatGPT, Gemini, Claude and Midjourney are currently trending AI tools.</p>
+
+</section>
+
+<section class="about" id="about">
+
+<h2>About ShivaVerse</h2>
+
+<p>ShivaVerse is a platform where users can discover the best AI tools for productivity, coding, writing and design.</p>
 
 </section>
 
@@ -293,5 +305,4 @@ document.getElementById("menu").classList.toggle("show");
 </script>
 
 </body>
-
 </html>
